@@ -11,10 +11,16 @@ var handleVideoSearch = (q) => {
     return data;
   };
 
+  var option = {
+    key : YOUTUBE_API_KEY,
+    query : q,
+    max : 5
+  }
+
   return function() {
     return {
       type: 'searchVideo',
-      videos: searchYouTube({YOUTUBE_API_KEY, q}, callback)
+      videos: searchYouTube(option, callback)
     };
   };
 };
