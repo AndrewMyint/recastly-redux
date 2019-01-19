@@ -20,17 +20,3 @@ var handleVideoSearch = (q) => {
 };
 
 export default handleVideoSearch;
-
-
-/*
-
-function not_a_thunk() {
-  // this one is a "thunk" because it defers work for later:
-  return function() {
-    {type: X,
-     videos: searchYouTube({YOUTUBE_API_KEY, q, max}, callback)
-    }
-  };
-}
-\
-*/
