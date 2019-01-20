@@ -1,6 +1,8 @@
 import React from 'react';
 
-var VideoListEntry = ({video, handleVideoListEntryTitleClick}) => (
+var VideoListEntry = ({video, handleVideoListEntryTitleClick}) => {
+  console.log("Inside VideoListEntry", handleVideoListEntryTitleClick)
+  return (
   <div className="video-list-entry">
     <div className="media-left media-middle">
       <img className="media-object" src={video.snippet.thumbnails.default.url} alt="" />
@@ -15,7 +17,7 @@ var VideoListEntry = ({video, handleVideoListEntryTitleClick}) => (
       <div className="video-list-entry-detail">{video.snippet.description}</div>
     </div>
   </div>
-);
+)}
 
 VideoListEntry.propTypes = {
   video: React.PropTypes.object.isRequired

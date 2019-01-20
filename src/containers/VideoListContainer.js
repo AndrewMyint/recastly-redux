@@ -12,10 +12,10 @@ var mapStateToProps = (state) => {
 
 var mapDispatchToProps = (dispatch) => {
   return {
-    handleVideoListEntryTitleClick: () => dispatch(changeVideo())
+    handleVideoListEntryTitleClick: (video) => dispatch(changeVideo(video))
   };
 };
 
 var VideoListContainer = connect(mapStateToProps, mapDispatchToProps)(VideoList);
-
+// console.log("Inside container",VideoListContainer);
 export default VideoListContainer;

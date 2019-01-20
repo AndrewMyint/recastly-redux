@@ -51,7 +51,7 @@ export default class App extends React.Component {
   //TODO: swap out the React components below for the container components
   //  you wrote in the 'containers' directory.
   render() {
-
+    {console.log('VideoList', VideoListContainer)}
     return (
       <div>
         <nav className="navbar">
