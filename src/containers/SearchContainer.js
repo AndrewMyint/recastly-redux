@@ -2,11 +2,18 @@ import React from 'react';
 import Search from './../components/Search.js';
 import { connect } from 'react-redux';
 import handleSearchChange from '../actions/search.js';
-import handleVideoSearch from '../actions/search.js';
-
+// import handleVideoSearch from '../actions/search.js';
+// import searchYouTube from '../lib/searchYouTube.js'
+// var handle = handleSearchChange('Hello')();
+// console.log(handle)
+//this.handleChange = _.debounce(this.handleChange, 500, {leading: false, trailing: true});
 var mapStateToDispatch = (dispatch) => {
+  var handleSearchChangeDebounce = _.debounce(handleSearchChange, 500);
   return {
-    handleSearchInputChange: (q) => dispatch(handleVideoSearch(q)())
+    //If Redux Thunk middleware is enabled, any time you attempt to dispatch a function instead of an action object,
+    //the middleware will call that function with dispatch method itself as the first argument.
+
+    handleSearchInputChange: (q) => dispatch(handleSearchChangeDebounce(q))
   };
 };
 

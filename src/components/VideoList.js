@@ -1,7 +1,10 @@
 import React from 'react';
 import VideoListEntry from './VideoListEntry.js';
 
-var VideoList = ({videos, handleVideoListEntryTitleClick}) => (
+var VideoList = ({videos, handleVideoListEntryTitleClick}) => {
+  console.log(handleVideoListEntryTitleClick)
+  return (
+
   <div className="video-list">
     {
       videos.map(video => (
@@ -13,7 +16,7 @@ var VideoList = ({videos, handleVideoListEntryTitleClick}) => (
       ))
     }
   </div>
-);
+)}
 
 VideoList.propTypes = {
   videos: React.PropTypes.array.isRequired
